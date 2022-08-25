@@ -17,8 +17,8 @@ do {
 maxRound = Math.round(maxNumber);
 console.log({maxRound})
 
-let counter = 0;
-let evenOdd = confirm("Пропускати парні числа ?");
+const counter = 0;
+const evenOdd = confirm("Пропускати парні числа ?");
 for (minRound; minRound <= maxRound; minRound++) {
     let remainder = minRound % 2;
     if (remainder === 1 && evenOdd === true) {
@@ -30,7 +30,7 @@ for (minRound; minRound <= maxRound; minRound++) {
     }}
 console.log("Sum: " +counter);
 
-let text = document.getElementById("HW2");
+const text = document.getElementById("HW2");
 text.innerHTML = 
     `<p>Число N - <span>${minRound-maxRound}</span></p>
     <p>Число M - <span>${maxRound}</span></p>
