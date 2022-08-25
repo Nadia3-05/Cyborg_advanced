@@ -2,107 +2,72 @@ console.log('HW#1 - Variables');
 
 
 //призначення значень змінним//
-let price_apple = '15.678' , 
-    price_fish = '123.965' ,
-    price_milk = '90.2345' ;
-    console.log('Price apple: '+price_apple +'$');
-    console.log('Price fish: '+price_fish +'$ ');
-    console.log('Price milk: '+price_milk +'$');
+const priceApple = 15.678 ; 
+const priceFish = 123.965 ;
+const priceMilk = 90.2345;
+    console.log('Price apple: '+priceApple +'$');
+    console.log('Price fish: '+priceFish +'$ ');
+    console.log('Price milk: '+priceMilk +'$');
+
 //Максимальне значення//
-let max = Math.max( price_apple,  price_fish,   price_milk);
-console.log('Max mean: '+max +'$');
+const max = Math.max( priceApple,  priceFish,   priceMilk);
+    console.log('Max number: '+max +'$');
 
 //Мінімальне значення//
-let min = Math.min( price_apple,  price_fish,  price_milk);
-console.log('Min mean: '+min+'$ ');
+const min = Math.min( priceApple,  priceFish,  priceMilk);
+    console.log('Min number: '+min+ '$ ');
 
 //Сума всіх значень//
-let sum = ( +price_apple + +price_fish + +price_milk);
-console.log('Sum: '+sum+'$ ');
+const sum = ( priceApple + priceFish + priceMilk);
+    console.log('Sum: '+sum+'$ ');
 
 //Сума завкруглень//
-let price1 = Math.floor(price_apple)
-console.log('Price of 1 product is ronded floor: ' +price1 +'$' );
-let price2 = Math.floor(price_fish)
-console.log('Price of 2 product is ronded floor: ' +price2 +'$ ' );
-let price3 = Math.floor(price_milk)
-console.log('Price of 3 product is ronded floor: ' +price3 +'$ ' );
-let sum_all = ( +price1 + +price2 + +price3);
-console.log('Sum of floor prices: '+sum_all +'$ ');
+const sumOfFloorPrices = Math.floor(priceApple) + Math.floor(priceFish) + Math.floor(priceMilk);
+    console.log('Sum of floor prices: '+sumOfFloorPrices +'$ ');
 
 //Сума завкруглень товарів до сотень//
-price_100_number1 = '0';
-let number1 = 15;
-if(number1 < 50){
-    console.log('Price 1 product rounded to 100 : ' +price_100_number1 +'$ ')
-} else{
-    console.log('100')
-}
-price_100_number2 = '100';
-let number2 = 123;
-if(number2 < 150 ){
-    console.log('Price 2 product rounded to 100: ' +price_100_number2 +'$ ')
-} else{
-    console.log('200')
-}
-price_100_number3 = '100';
-let number3 = 90;
-if(number3 < 150 ){
-    console.log('Price 3 product rounded to 100: ' +price_100_number3 +'$ ')
-} else{
-    console.log('200')
-}
-let sum_price_100 = ( +price_100_number1 + +price_100_number2 + +price_100_number3);
-console.log('Sum rounded to 100: '+sum_price_100 +'$ ');
+const sumRoundedTo100 = Math.round(sumOfFloorPrices / 100) * 100
+    console.log('Price 1 product rounded to 100 : ' +sumRoundedTo100 +'$ ')
 
 //перевірка на парність//
-sum_alll = 'true';
-let Numberr = 228;
-if(Numberr % 2 ==0){
-    console.log(sum_alll +' - even number:' +' true')
+if(sumOfFloorPrices % 2 ==0){
+    console.log('Even number:' +' true')
 } else{
-    console.log(sum_alll +' - even number:' +' false')
+    console.log('Even number:' +' false')
 }
-
 //решта з 500грн//
 remainder = 500 - sum;
-console.log('Remainder ' +remainder +' $')
+    console.log('Remainder ' +remainder +' $')
 
 //середнє арифм цін//
-var arr = [15.68 , 123.97 , 90.23];
-var summ = 0;
-for (var i = 0; i < arr.length; i++) {
-    summ +=arr[i];
-}
-var result = summ / arr.length;
-console.log('Arithmetic mean: ' +result)
+const Arithmetic = sum / 3;
+    console.log('Arithmetic mean: ' +Arithmetic)
 
 //знижка//
-let sale = Math.floor(Math.random() * 10);
-console.log('Random sale - ' +sale +'%')
+const sale = Math.floor(Math.random() * 10);
+    console.log('Random sale - ' +sale +'%')
 
 
 //Сума із знижкою//
-let sales = (sum / 100 )* sale;
-let TOTAL = sum - sales;
-console.log('Total: ' +TOTAL.toFixed(2) +'$')
+const TOTAL = sum - (sum / 100 )* sale;
+    console.log('Total: ' +TOTAL +'$')
 
 //прибуток//
-let profit = (sum / 2) - sales;
+const profit = (sum / 2) - (sum / 100 )* sale;
 console.log('Profit: ' +profit +'$')
 
-let html = `
-<p> Price apple: = ${price_apple}$</p>
-<p> Price fish: = ${price_fish}$</p>
-<p> Price milk: = ${price_milk}$</p>
+const html = `
+<p> Price apple: = ${priceApple}$</p>
+<p> Price fish: = ${priceFish}$</p>
+<p> Price milk: = ${priceMilk}$</p>
 <p> Max mean = ${max}$</p>
 <p> Min mean = ${min}$</p>
 <p> Sum of prices = ${sum}$</p>
-<p> Sum of floor prices = ${sum_all}$</p>
-<p> Sum rounded to 100 = ${sum_price_100}$</p>
-<p> Even number: 228 = ${sum_alll}</p>
+<p> Sum of floor prices = ${sumOfFloorPrices}$</p>
+<p> Sum rounded to 100 = ${sumRoundedTo100}$</p>
+<p> Even number: ${sumOfFloorPrices % 2 == 0}</p>
 <p> Remainder = ${remainder}$</p>
-<p> Arithmetic mean = ${result}$</p>
+<p> Arithmetic mean = ${Arithmetic}$</p>
 <p> Random sale = ${sale} %</p>
 <p> Total = ${TOTAL}$</p>
 <p> Profit = ${profit}$</p>`;
