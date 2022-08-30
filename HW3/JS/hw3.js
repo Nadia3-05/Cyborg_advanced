@@ -67,15 +67,15 @@ const generatePassword = (
   console.log(generatePassword(6))
 
 //Function11
-var str = 'blablablalblablalb';
+let str = 'blablablalblablalb';
 str = str.replace(/[a]/gi, '');
   
 console.log(str)
 
 //Function12
 function isPalindrom(str) {
-    var ia = 0;
-    var ib = str.length - 1;
+    const ia = 0;
+    const ib = str.length - 1;
     do {
       if (str[ia] === str[ib]) continue;
       if (str[ia] === ' ' && ib++) continue;
@@ -84,8 +84,8 @@ function isPalindrom(str) {
     } while (++ia < --ib);
     return true;
   }
-  var palindrom="never odd or even";
-  var res = isPalindrom(palindrom);
+  const palindrom="never odd or even";
+  const res = isPalindrom(palindrom);
   console.log(isPalindrom('я несу гусеня'));
 
 
