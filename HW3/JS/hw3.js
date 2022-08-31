@@ -82,7 +82,6 @@ console.log(str)
       <p>Function5 - <span>${getRandomNumber (1, 10)}</span></p>
       <p>Function6 - <span>${calcRepeatLetter('Абракадабраа')}</span></p>
       <p>Function9-10 - <span>${generatePassword(6)}</span></p>
-      <p>Function11 - <span>${str}</span></p>
-      <p>Function12 - <span>${isPalindrom('я несу гусеня')}</span></p>`;
+      <p>Function11 - <span>${str}</span></p>`;
       
 
