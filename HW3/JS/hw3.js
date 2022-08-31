@@ -72,22 +72,6 @@ str = str.replace(/[a]/gi, '');
   
 console.log(str)
 
-//Function12
-function isPalindrom(str) {
-    const ia = 0;
-    const ib = str.length - 1;
-    do {
-      if (str[ia] === str[ib]) continue;
-      if (str[ia] === ' ' && ib++) continue;
-      if (str[ib] === ' ' && ia--) continue;
-      return false;
-    } while (++ia < --ib);
-    return true;
-  }
-  const palindrom="never odd or even";
-  const res = isPalindrom(palindrom);
-  console.log(isPalindrom('я несу гусеня'));
-
 
   const text = document.getElementById("HW3");
   text.innerHTML = 
