@@ -8,8 +8,8 @@ function getRandomArray(lenght, min, max) {
 console.log(random);
 //2 
 function getModes(array) {
-    const first = [];
-    const maxFirs = 0; 
+    let first = [];
+    let maxFirs = 0; 
     let modes = [];
     for (var i in array) {
       first[array[i]] = (first[array[i]] || 0) + 1;
