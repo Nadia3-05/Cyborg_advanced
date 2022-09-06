@@ -8,8 +8,8 @@ function getRandomArray(lenght, min, max) {
 console.log(random);
 //2 
 function getModes(array) {
-    var first = [];
-    var maxFirs = 0; 
+    const first = [];
+    const maxFirs = 0; 
     let modes = [];
     for (var i in array) {
       first[array[i]] = (first[array[i]] || 0) + 1;
@@ -19,7 +19,7 @@ function getModes(array) {
       if (first[k] == maxFirs) {
         modes.push(k);}}
     return modes;}
-    let result2 = getModes(random)
+    const result2 = getModes(random)
   console.log(result2);
 //3
 const sum = random.reduce((partialSum, a) => partialSum + a, 0);
@@ -66,10 +66,6 @@ function dividedByThree (word) {
   return newWordThree;
   }
   console.log(dividedByThree ('commanders'));
-
-
-
-
 
 const k = document.getElementById("HW5");
   k.innerHTML = 
