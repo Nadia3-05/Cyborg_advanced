@@ -1,33 +1,33 @@
 let minNumber ;
 let minRound;
+
 do {
-    minNumber = prompt ( "Введіть мінімальне число (N)");
-} while (!minNumber);
-// console.log({minNumber})
+    minNumber = Math.floor(prompt("Введіть мінімальне число (N)"));
+    if (!Number.isFinite(minNumber)) {
+        alert("ВВЕДІТЬ ЧИСЛО!!!");
+    }
+} while (!Number.isFinite(minNumber));
 minRound = Math.round(minNumber);
-console.log({minRound})
+console.log({minRound});
 
-let maxNumber;
-let maxRound;
 do {
-    maxNumber = prompt ( "Введіть максимальне число (M)");
+    maxNumber = Math.floor(prompt("Введіть максимальне число (M)"));
+    if (!Number.isFinite(maxNumber)) {
+        alert("ВВЕДІТЬ ЧИСЛО!!!");
+    }
+} while (!Number.isFinite(maxNumber));
 
-} while (!maxNumber);
-// console.log({maxNumber})
 maxRound = Math.round(maxNumber);
-console.log({maxRound})
+console.log({maxRound});
 
-const counter = 0;
+let counter = 0;
 const evenOdd = confirm("Пропускати парні числа ?");
 for (minRound; minRound <= maxRound; minRound++) {
-    let remainder = minRound % 2;
-    if (remainder === 1 && evenOdd === true) {
-        counter += minRound;
-        console.log(minRound);
-    } else if (evenOdd === false) {
-        counter += minRound;
-        console.log(minRound);
-    }}
+    if (!(minRound % 2) && evenOdd) {
+        continue;
+    } 
+    counter += minRound;
+  }
 console.log("Sum: " +counter);
 
 const text = document.getElementById("HW2");
