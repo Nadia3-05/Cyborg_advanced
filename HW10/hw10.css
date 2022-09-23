@@ -1,16 +1,14 @@
-.main {
-    display: grid;
-    grid-template-columns: repeat(5, 50px);
-    margin: 15% 0 0 41%;
-
-}
-div{
-    width: 50px;
-    height: 50px;
-    gap: 3px;
-    border: 1px solid black;
-    border-radius: 15%;
-}
 h3{
     text-align: center;
 }
+.square{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+} 
+.box{
+    width: 250px;
+    margin:0 auto; 
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+} 

@@ -1,22 +1,35 @@
 function generateBlocks() {
-    const oneRGB = () => Math.floor(Math.random() * 256);
-    const fullRGB = () => "rgb(" + oneRGB() + "," + oneRGB() + "," + oneRGB() + ")";
-    console.log(oneRGB())
-    console.log(fullRGB())
-
-    const boxes = Array.from(document.getElementsByClassName('box'));
-    console.log(boxes);
-
-    boxes.map((el) => {
-        el.style.backgroundColor = fullRGB();
-    });
+    let main = document.createElement("block");
+    document.body.prepend(main);
+    main.classList.add("box");
+   
+    for (let i = 0; i < 25; i++) {
+        let div = document.createElement("div");
+        main.prepend(div);
+        div.classList.add("square");
+        div.style.cssText = `background-color: ${getRandomColors()};`;
+    }
+}
+function getRandomColors(){
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    const rgb = "rgb("+r+","+g+","+b+")";
+        return rgb;
 }
 
-generateBlocks();
-
+let counter = 0;
 function generateBlocksInterval() {
-    setInterval(generateBlocks, 1000)
+    if (counter === 0) {
+        generateBlocks();
+        counter += 1;
+    } else {
+        let div = document.getElementsByTagName("div");
+        for (let i = 0; i < 25; i++) {
+            div[i].style.backgroundColor = `${getRandomColors()}`;
+        }
+    }
+
+    setTimeout(generateBlocksInterval, 1000);
 }
-
 generateBlocksInterval();
-
