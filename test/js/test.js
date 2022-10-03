@@ -1,18 +1,26 @@
-function delay() {
-    return new Promise((res) => setTimeout(res, 50));
-}
+function* newFontGenerator() {
+    for(let i = fontGenerator2.next().value; i < 72; i++) {
+      yield i++
+    }   
+}  
+// const fontGenerator = newFontGenerator();
 
-async function getRandomChinese(length) {
-    let result = "";
-    let i=0;
-    while(i< length){
-        i++;
-        const sign = +Date.now() % 100000;
-        result += String.fromCharCode(sign);
-        new Promise(res => setTimeout(res, 50))
-        await delay();
-    }
-    console.log(result);
-    return result;
-}
-getRandomChinese(4)
+// console.log(fontGenerator.next().value);
+// console.log(fontGenerator.next().value);
+// console.log(fontGenerator.next().value);
+// console.log(fontGenerator.next().value);
+
+
+
+
+function* newFontGenerator2() {
+    for(let i =fontGenerator.next().value ; i < 72; i--) {
+      yield i--
+    }   
+}  
+// const fontGenerator2 = newFontGenerator2();
+// console.log(fontGenerator2.next().value);
+// console.log(fontGenerator2.next().value);
+// console.log(fontGenerator2.next().value);
+// console.log(fontGenerator2.next().value);
+// console.log(fontGenerator2.next().value);

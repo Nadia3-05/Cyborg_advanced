@@ -36,3 +36,5 @@ text.innerHTML =
     <p>Число M - <span>${maxRound}</span></p>
     <p>Булеве значення - <span>${evenOdd}</span></p>
     <p>Відповідь - <span>${counter}</span></p>`;
+
+    
