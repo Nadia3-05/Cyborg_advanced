@@ -15,12 +15,19 @@ console.log(maxDigit(1655890));
 //Function2
   function calcDegree(number, degree) {
       let result = number;
+      if(degree === 0){
+        result = 1
+      }
+      if(degree < 0){
+        degree = degree * (-1)
+      }
       for (let i = 1; i < degree; i++){
           result *= number;
       }
       return result;
+      
   }
-console.log(calcDegree(2, 5));
+console.log(calcDegree(2, 0));
 
 //Function3
   const capitalize = ([first,...rest]) => first.toUpperCase() + rest.join('').toLowerCase();
@@ -39,21 +46,10 @@ function getRandomNumber(N, M) {
 console.log(getRandomNumber (1, 10));
 
 //Function6
-function calcRepeatLetter(initStr) {
-  const strItems = initStr.split('');
-  const result = {};
-  strItems.forEach( item => {
-    const normalItem = item.toLowerCase();
-    if(normalItem in result) {
-      result[normalItem] = result[normalItem] + 1;
-    } else {
-      result[normalItem] = 1;
-    }
-  });
-  return Object.keys(result).map(k => {
-    return `letter: ${k}: ${result[k]};`
-  }).join(' ')}
-console.log(calcRepeatLetter('Абракадабраа'))
+function calcRepeatLetter(letter, word) {
+  return (word.toLowerCase().split(letter)).length - 1;
+}
+console.log(calcRepeatLetter('а','Асталавіста'))
 
 //Function9-10
 const generatePassword = (
@@ -67,21 +63,21 @@ const generatePassword = (
   console.log(generatePassword(6))
 
 //Function11
-let str = 'blablablalblablalb';
-str = str.replace(/[a]/gi, '');
-  
-console.log(str)
+function deleteLetters(letter, str) {
+  return str.split(letter).join("");
+}
+console.log(deleteLetters('a','ablallbablabla'))
 
 
   const text = document.getElementById("HW3");
   text.innerHTML = 
       `<p>Function1 - <span>${maxDigit(1655890)}</span></p>
-      <p>Function2 - <span>${calcDegree(2, 5)}</span></p>
+      <p>Function2 - <span>${calcDegree(2, 0)}</span></p>
       <p>Function3 - <span>${capitalize("HELLO WoRld")}</span></p>
       <p>Function4 - <span>${calcPay(1000)}</span></p>
       <p>Function5 - <span>${getRandomNumber (1, 10)}</span></p>
-      <p>Function6 - <span>${calcRepeatLetter('Абракадабраа')}</span></p>
+      <p>Function6 - <span>${calcRepeatLetter("а", "Асталавіста")}</span></p>
       <p>Function9-10 - <span>${generatePassword(6)}</span></p>
-      <p>Function11 - <span>${str}</span></p>`;
+      <p>Function11 - <span>${deleteLetters('a','ablallbablabla')}</span></p>`;
       
 
