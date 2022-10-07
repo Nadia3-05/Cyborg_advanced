@@ -1,10 +1,6 @@
 body{
     padding-left: 30px;
 }
-
-p{
-    margin: 30px 0 30px 20px ;
-}
 button{
     background: rgb(142, 224, 237);
     border: none;
@@ -13,7 +9,16 @@ button{
     width: 80px;
     margin-left: 10px;
     margin-top: 20px;
+    box-shadow: 5px 3px 5px 2px rgb(121, 200, 213);;
+    border: 1px solid rgb(94, 174, 187);   
 }
 button:hover{
-    background: rgb(107, 174, 185);
+    background: rgb(111, 182, 193);
+}
+h2{
+    color:rgb(31, 123, 137) ;
+    font-family: "Sofia", sans-serif;
+}
+.change{
+    margin-left: 8px; 
 }
