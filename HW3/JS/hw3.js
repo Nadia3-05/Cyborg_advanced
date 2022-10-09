@@ -13,21 +13,20 @@ function maxDigit(number){
 console.log(maxDigit(1655890));
 
 //Function2
-  function calcDegree(number, degree) {
-      let result = number;
-      if(degree === 0){
-        result = 1
-      }
-      if(degree < 0){
-        degree = degree * (-1)
-      }
-      for (let i = 1; i < degree; i++){
-          result *= number;
-      }
-      return result;
-      
+function calcDegree(number, degree) {
+  let result  = 1;
+  if (degree < 0) {
+    for (let i = degree; i < 0; i++) {
+      result /= number;
+    }
+  } else {
+    for (let i = 1; i <= degree; i++) {
+      result *= number;
+    }
   }
-console.log(calcDegree(2, 0));
+  return result;
+}
+console.log(calcDegree(2, -4));
 
 //Function3
   const capitalize = ([first,...rest]) => first.toUpperCase() + rest.join('').toLowerCase();
@@ -47,7 +46,7 @@ console.log(getRandomNumber (1, 10));
 
 //Function6
 function calcRepeatLetter(letter, word) {
-  return (word.toLowerCase().split(letter)).length - 1;
+  return (word.toLowerCase().split(letter.toLowerCase())).length - 1;
 }
 console.log(calcRepeatLetter('а','Асталавіста'))
 
@@ -72,7 +71,7 @@ console.log(deleteLetters('a','ablallbablabla'))
   const text = document.getElementById("HW3");
   text.innerHTML = 
       `<p>Function1 - <span>${maxDigit(1655890)}</span></p>
-      <p>Function2 - <span>${calcDegree(2, 0)}</span></p>
+      <p>Function2 - <span>${calcDegree(2, -4)}</span></p>
       <p>Function3 - <span>${capitalize("HELLO WoRld")}</span></p>
       <p>Function4 - <span>${calcPay(1000)}</span></p>
       <p>Function5 - <span>${getRandomNumber (1, 10)}</span></p>
