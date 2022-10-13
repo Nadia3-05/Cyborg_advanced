@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./STYLE/hw13.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+  <title>HW#13</title>
+</head>
+
+<body  onload="draw()">
+  <div class="container">
+    <canvas id="nightSky"></canvas> 
+    <div id="starsSmall"></div>
+    <div id="fallingStar"></div>
+  </div>
+  <img class="yoda" src="./img/2022-10-12 11.52.38.jpg" alt="yoda">
+  <img  class="character1" src="./img/2022-10-12 11.52.29.jpg" alt="Luke">
+  <img class="character2" src="./img/2022-10-12 11.52.11.jpg" alt="Darth">
+  <header class="haeder">
+    <div class="menu">
+      <button class="people" id="people-previous" type="button"><h3>PEOPLE</h3></button>
+      <button id="people-next" type="button">next &gt&gt</button>
+      <button class="planet" id="planets-previous" type="button"><h3>PLANETS</h3></button>
+      <button id="planets-next" type="button">next &gt&gt</button>
+    </div>
+  </header>
+
+  <audio src="./audio/The Imperial March (Darth Vader Theme).mp3"></audio>
+  <main>  
+    <div class="SW">
+      <img src="./img/2022-10-12 11.52.44.jpg" alt="STAR">
+      <img src="./img/2022-10-12 11.52.53.jpg" alt="WARS">
+    </div>
+    <div id="ctn-main" class="ctn"></div>  
+  </main>
+      
+  <div class="overlay"><div class="loading">LOADING...</div></div> 
+     
+
+  <script src="./JS/hw13.js"></script>
+  <script src="./JS/hw13animation.js"></script>
+   
+</body>
+</html>

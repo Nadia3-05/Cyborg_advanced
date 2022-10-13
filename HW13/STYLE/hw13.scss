@@ -1,0 +1,153 @@
+.main-title {
+  color: rgb(255, 166, 0);
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+#ctn-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+}
+#ctn-planets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  
+.card {
+  border-radius: 25px;
+  background-color: rgba(0,0,0,0.9);
+  color: rgb(214, 162, 41);
+  width: 200px;
+  min-width: 200px;
+  
+  text-align: center;
+  margin: 15px;
+  padding: 5px;
+}
+
+.next{
+  font-family: 'Roboto Slab', serif;
+}
+
+.loading{
+  color: rgb(0, 0, 0);
+}
+
+.card-planet {
+  box-shadow: -5px 3px 4px 2px rgba(218, 63, 24, 0.502) ;
+  &:hover{
+    background-color: rgba(135, 99, 33, 0.768);
+  } 
+}
+.card-people {
+  box-shadow: 5px 3px 4px 2px rgba(218, 215, 24, 0.484) ;
+  &:hover{
+    background-color: rgba(135, 99, 33, 0.768);
+  } 
+}
+
+.yoda{
+ top: 4%;
+ left: 45%;
+ width: 150px;
+ height: auto;
+ position: absolute;
+ 
+}
+  
+.SW {
+  
+  text-align: center;
+  margin-bottom: 45px;
+  img{
+    width: 150px;
+    height: auto;
+    margin-top: 12%;
+  }
+}
+   
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(108, 86, 8, 0.32); 
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+.overlay.active {
+  display: flex;
+  cursor: wait;
+}
+
+body {
+  background: black;
+}
+
+@keyframes hide {
+  from {
+    transform: rotate(-40deg) translate3d(360px, 0, 0);
+    opacity: 0.8;
+  }
+  to {
+    transform: rotate(-40deg) translate3d(-360px, 0, 0);
+    opacity: 0;
+  }
+}
+
+button{
+  width: 100px ;
+  height: 50px;
+  background-color: rgba(16, 15, 15, 0.768);
+  color: rgb(214, 162, 41);
+  margin-left: 15px;
+  opacity: 70%;
+  box-shadow: 5px 3px 4px 2px rgb(226, 145, 23) ;
+  border: none;
+ 
+   &:hover{
+    background-color: rgba(135, 99, 33, 0.768);
+ }
+}
+
+.menu{ 
+  display: flex;
+  position: absolute;
+  left: 15%;
+  top: 5%;
+  right: 17%;
+}
+
+.character1{
+  width: 9%;
+  height: auto;
+  position: absolute;
+  top:9%;
+  left: 2%;
+}
+
+.character2{
+  width: 9%;
+  height: auto;
+  position: absolute;
+  top: 9%;
+  right: 5% ;
+}
+
+#nightSky{
+  height: 85px;
+  position: absolute;
+  left: 5%;
+  top: 0;
+}
+.people{
+  margin-left: 12%;
+}
+.planet{
+margin-left: 35%;
+}

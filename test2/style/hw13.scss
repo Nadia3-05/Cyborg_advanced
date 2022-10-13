@@ -1,0 +1,285 @@
+/* Animation properties */
+.star {
+    animation: star 10s ease-out infinite;
+  }
+  .wars {
+    animation: wars 10s ease-out infinite;
+  }
+  .byline span {
+    animation: spin-letters 10s linear infinite;
+  }
+  .byline {
+    animation: move-byline 10s linear infinite;
+  }
+  
+  /* Keyframes */
+  @keyframes star {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) translateY(-0.75em);
+    }
+    20% {
+      opacity: 1;
+    }
+    89% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateZ(-1000em);
+    }
+  }
+  
+  @keyframes wars {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) translateY(0.5em);
+    }
+    20% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateZ(-1000em);
+    }
+  }
+  
+  @keyframes spin-letters {
+    0%, 10% {
+      opacity: 0;
+      transform: rotateY(90deg);
+    }
+    30% {
+      opacity: 1;
+    }
+    70%, 86% {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+    95%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes move-byline {
+    0% {
+      transform: translateZ(5em);
+    }
+    100% {
+      transform: translateZ(0);
+    }
+  }
+  
+  /* Make the 3D work on the container */
+  .starwars-demo {
+    perspective: 800px;
+    transform-style: preserve3d;
+  }
+  
+
+  
+  .starwars-demo {
+    height: 17em;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44em;
+  }
+  #planets-previous{
+    margin-left: 70px;
+  }
+  
+  .byline span {
+    // display: inline-block;
+  }
+  
+  img {
+    width: 100%;
+    margin-top: -70px;
+    margin-bottom: -70px;
+  }
+  
+  .byline {
+    color: #fff;
+    font-family: "ITC Serif Gothic", Lato;
+    font-size: 2.25em;
+    left: -2em;
+    letter-spacing: 0.4em;
+    right: -2em;
+    text-align: center;
+    text-transform: uppercase;
+    top: 29%;
+   
+  }
+  
+  /*** Media queries for adjusting to different screen sizes ***/
+  
+  @media only screen and (max-width: 600px) {
+    .starwars-demo {
+      font-size: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .starwars-demo {
+      font-size: 7px;
+    }
+  }
+  
+  
+  
+   //sky//
+   body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: black;
+  }
+  
+  .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+  }
+  
+  @keyframes hide {
+      from {
+          transform: rotate(-40deg) translate3d(360px, 0, 0);
+          opacity: 0.8;
+      }
+      to {
+          transform: rotate(-40deg) translate3d(-360px, 0, 0);
+          opacity: 0;
+      }
+  }
+  #nightSky{
+      height: 100px;
+      margin-left: 40%;
+      margin-bottom: 50%
+  }
+  .menu{
+      
+      position: absolute;
+      top: 5%;
+      left: 15%;
+      width: 100%;
+      display: flex;
+      z-index: 6;
+      button{
+          width: 100px ;
+          height: 50px;
+          background-color: rgba(16, 15, 15, 0.768);
+          color: rgb(214, 162, 41);
+          margin-left: 15px;
+          opacity: 70%;
+          box-shadow: 5px 3px 4px 2px rgb(226, 145, 23) ;
+          border: none;
+         
+           &:hover{
+            background-color: rgba(135, 99, 33, 0.768);
+         }
+      }
+  
+  }
+  .diapchuk{
+      width: 9%;
+      height: auto;
+      position: absolute;
+      top: 12%;
+      left: 2%;
+  }
+  .diapchuk2{
+      width: 9%;
+      height: auto;
+      position: absolute;
+      top: 9%;
+      right: 2% ;
+  }
+  .diapchuk3{
+      width: 20%;
+      height: auto;
+      position: absolute;
+      bottom: 4%;
+      
+  }
+
+//nj
+.txt-shadow-gold {
+  text-shadow: 1px 1px 1px gold;
+}
+.main-title {
+  color: rgb(255, 25, 0);
+  text-align: center;
+}
+
+#ctn-main {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+}
+
+#ctn-planets {
+   display: flex;
+   justify-content: center;
+}
+
+.card {
+  border-radius: 25px;
+  background-color: rgba(0,0,0,0.9);
+  width: 200px;
+  min-width: 200px;
+  text-wrap: wrap;
+  text-align: center;
+  margin: 15px;
+  padding: 5px;  
+}
+.loading{
+color: aqua;
+}
+.card-planet {
+  border: 3px solid rgb(255, 98, 0);
+  text-shadow: 1px 1px 1px rgb(48, 41, 3);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(194, 155, 18, 0.8);
+  
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay.active {
+  display: flex;
+  cursor: wait;
+}
+
+@media only screen and (max-width: 1000px){
+  body {
+    font-size: x-large;
+  }
+  nav {
+    height: 125px;
+  }
+
+  button {
+    height: 20px;
+  }
+}
