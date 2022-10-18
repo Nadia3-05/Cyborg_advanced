@@ -41,8 +41,8 @@ module.exports ={
     plugins:[
         new htmlWebpackPlugin({
             title: 'My Web Page',
-            filename: 'hw16.html',
-            template: 'src/hw16.html'
+            filename: 'index.html',
+            template: 'src/index.html'
         })
     ]
 }
