@@ -1,0 +1,42 @@
+$base-color: #FFFFFF;
+
+body{
+    background-color: $base-color;
+}
+img{
+    width: 500px;
+}
+h1 {
+    text-align: center;
+    color: rgb(33, 72, 229);
+}
+
+.wrapper {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 2px;
+    grid-template-columns: repeat(5, 50px);
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.main__box{
+    display:inline-flex;
+    width: 275px;
+    height: 150px;
+    background-color: rgba(147, 226, 236, 0.561);
+    margin-top: 23px;
+    margin-left: 3.4%;
+    box-shadow: 2px 2px 2px 2px rgb(37, 119, 195);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 10px;
+    
+}

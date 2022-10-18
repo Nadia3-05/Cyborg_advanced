@@ -6,3 +6,9 @@ function playNote(e){
     audio.play();
 }
 window.addEventListener('keydown', playNote);
+
+document.querySelector('#letterA').addEventListener('click',() => {
+    document.querySelector('audio').play()
+  })
+
+ 
