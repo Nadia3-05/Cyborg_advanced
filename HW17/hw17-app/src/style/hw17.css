@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+body {
+    background: rgba(78, 178, 224, 0.328);
+    font-family: "Poppins", sans-serif;
+}
+
+.main {
+    width: 95%;
+    box-shadow: 5px 5px 10px #515151;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.main__box__avatar {
+    background-color: rgba(253, 253, 253, 0.339);
+    display: flex;
+      
+}
+.main__box__post {
+    text-align: center;
+    background: rgb(255, 255, 255);
+    padding: 20px; 
+}
+.photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 15%;
+    margin-top: 5%;
+    display: flex; 
+}
+
+.info__name {
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 3%;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.info__nickname {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-left: -32px;
+}
+
+.main__description {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: left;
+    font-family: 'Roboto Slab', serif;
+}
+
+.main__date {
+    font-size: 12px;
+    text-align: right;
+}
+
+.main__image img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.info__likes {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.info__likes:hover {
+    color: #ef3109;
+}
+
+.info__likes_image {
+    width: 25px;
+    height: 25px;
+}
+
+.info__likes_image_item {
+    fill: #000000;
+    width: 25px;
+    height: 25px;
+}
+
+.info__likes_image_item:hover {
+    fill: #ef3109;
+}
+.people {
+    width: 25px;
+    height: 25px;
+    margin-left: 2%;
+    display: flex;
+    margin-right: 10%;
+      
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+.icon__info{
+    display: flex;
+}

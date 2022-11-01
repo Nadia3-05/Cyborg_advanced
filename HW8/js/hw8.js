@@ -5,18 +5,18 @@ class Student {
     this.fullName = fullName;
     this.marks = marks;
     this.newMarks = newMarks
-    this.dismiss = true;
+    this.isDismiss = true;
   }
 
   getInfo() {
     return `Студент ${this.course}-го курсу ${this.university}, ${this.fullName}`;
   }
   getMarks()  {
-    return this.dismiss ? this.marks : null
+    return this.isDismiss ? this.marks : null
   }
     
   setMark () {
-    return this.dismiss ? this.newMarks : null
+    return this.isDismiss ? this.newMarks : null
   }
   
   getAverageMark () {
@@ -24,15 +24,15 @@ class Student {
     for (let i = 0; i < this.marks.length; i++) {
       sumMarks += this.marks[i];
     }
-    return this.dismiss ? sumMarks / this.marks.length : null
+    return this.isDismiss ? sumMarks / this.marks.length : null
   } 
 
   dismiss() {
-    (!this.dismiss);
+    (!this.isDismiss);
   }
 
   recover() {
-    (this.dismiss);
+    (this.isDismiss);
   }
 }
 
