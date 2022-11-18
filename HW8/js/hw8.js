@@ -28,11 +28,11 @@ class Student {
   } 
 
   dismiss() {
-    (!this.isDismiss);
+    this.dismiss = false;
   }
 
   recover() {
-    (this.isDismiss);
+     this.dismiss = true;
   }
 }
 
